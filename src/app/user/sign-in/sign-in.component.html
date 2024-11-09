@@ -10,6 +10,7 @@
     <!-- *Next add a template variable for email and set it to ngModel. It creates a
      *FormControl instance from a domain model and binds it to a form control element.
      *ngIf="email.errors?.['required']  this means if the required object has a "required" property
+     
      -->
     <input name="email" required email #email="ngModel" [(ngModel)]="credentials.email" placeholder="Email Address"  type="text" />
     <em class="error" *ngIf="email.errors?.['required'] && email.touched">Email is required</em>
